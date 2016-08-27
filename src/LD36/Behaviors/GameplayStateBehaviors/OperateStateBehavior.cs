@@ -8,8 +8,7 @@ namespace LD36.Behaviors.GameplayStateBehaviors
 {
     /// <summary>
     /// Tactical state. Player has to respond to technical issues, assign
-    /// employees to tickets, install hardware, etc.
-    /// Tasks vs Tickets
+    /// employees to tickets, install hardware, etc. Tasks vs Tickets.
     /// </summary>
     class OperateStateBehavior : Behavior
     {

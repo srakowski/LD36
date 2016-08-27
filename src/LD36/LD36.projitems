@@ -17,6 +17,28 @@
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\WinStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateMachine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LD36Game.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Company.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EmployeeSkillLevels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Facility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\PrintStation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\ServerRoom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\Workstation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GameplayModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ITEmployee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SkillLevel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Computer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\DesktopComputer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Fax.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\MainFrame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Printer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Router.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Server.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Telephone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Terminal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Technology.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TodoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TodoList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\GameplayState.cs" />
   </ItemGroup>
 </Project>
