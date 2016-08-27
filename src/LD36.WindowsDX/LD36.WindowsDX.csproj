@@ -51,6 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\cwall.png" />
+    <Content Include="Content\hall.png" />
+    <Content Include="Content\hwall.png" />
+    <Content Include="Content\office.png" />
+    <Content Include="Content\printstation.png" />
+    <Content Include="Content\serverroom.png" />
+    <Content Include="Content\vwall.png" />
+    <Content Include="Content\workstation.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

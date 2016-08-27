@@ -9,6 +9,7 @@
     <Import_RootNamespace>LD36</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FacilityViewBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\BudgetStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\LoseStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\OperateStateBehavior.cs" />
@@ -16,17 +17,24 @@
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\ProgressStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\WinStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateMachine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\HudViewBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LD36Game.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CeoEmployee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Company.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\EmployeeSkillLevels.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Facility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\Office.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\PrintStation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\ServerRoom.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\Workstation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GameplayModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Gender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GeneralEmployee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ITDepartment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ITEmployee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\NameGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PlayerEmployee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SkillLevel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Computer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\DesktopComputer.cs" />
@@ -40,5 +48,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technology.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Task.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\GameplayState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FacilityViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HudViewModel.cs" />
   </ItemGroup>
 </Project>

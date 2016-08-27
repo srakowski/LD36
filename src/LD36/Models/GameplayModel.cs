@@ -11,13 +11,6 @@ namespace LD36.Models
     class GameplayModel
     {
         private Random _rand => new Random();
-        
-        /// <summary>
-        /// Global randomness for the simulation. Used to make checks for things like
-        /// technical failures, software tickets, etc... Minor entropy but should
-        /// not have major affect on the decision as to whether or not the player wins.
-        /// </summary>
-        public Random Rand => _rand;
 
         /// <summary>
         /// Model of Dolittle Widgets Corporation
@@ -38,9 +31,11 @@ namespace LD36.Models
         /// Create a new model of gameplay, called when new game is started.
         /// </summary>
         /// <returns></returns>
-        public GameplayModel Create()
+        public static GameplayModel Create(string playerName, Gender gender)
         {
-            return new GameplayModel();
+            var gameplayModel = new GameplayModel();
+            gameplayModel.Company = Company.Create(gameplayModel._rand, playerName, gender);
+            return gameplayModel;
         }
     }
 }

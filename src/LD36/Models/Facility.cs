@@ -8,12 +8,23 @@ namespace LD36.Models
 {
     class Facility
     {
+        public string Name { get; set; }
+
         private List<Workstation> _workstations = new List<Workstation>();
 
         /// <summary>
         /// Workstations in this facility. Computer tech + non-it employees.
         /// </summary>
         public IEnumerable<Workstation> Workstations => _workstations;
+
+
+        private List<Office> _offices = new List<Office>();
+
+        /// <summary>
+        /// Just bigger workstations, mostly for viewing.
+        /// </summary>
+        public IEnumerable<Office> Offices => _offices;
+
 
         private List<ServerRoom> _serverRooms = new List<ServerRoom>();
 
@@ -22,6 +33,7 @@ namespace LD36.Models
         /// </summary>
         public IEnumerable<ServerRoom> ServerRooms => _serverRooms;
 
+
         private List<PrintStation> _printStations = new List<PrintStation>();
 
         /// <summary>
@@ -29,9 +41,36 @@ namespace LD36.Models
         /// </summary>
         public IEnumerable<PrintStation> PrintStations => _printStations;
 
+
         /// <summary>
-        /// The inventory of all technology in this facility.
+        /// Create a facility with these properties.
         /// </summary>
-        public List<Technology> Inventory { get; set; } = new List<Technology>();
+        /// <param name="numWorkStations"></param>
+        /// <param name="numOffices"></param>
+        /// <param name="numPrintStations"></param>
+        /// <param name="numServerRooms"></param>
+        /// <returns></returns>
+        public static Facility Create(string name,
+            int numWorkStations, int numOffices, 
+            int numPrintStations, int numServerRooms)
+        {
+            var facility = new Facility();
+
+            facility.Name = name;
+
+            for (var i = 0; i < numWorkStations; i++)
+                facility._workstations.Add(new Workstation());
+
+            for (var i = 0; i < numOffices; i++)
+                facility._offices.Add(new Office());
+
+            for (var i = 0; i < numPrintStations; i++)
+                facility._printStations.Add(new PrintStation());
+
+            for (var i = 0; i < numServerRooms; i++)
+                facility._serverRooms.Add(new ServerRoom());
+
+            return facility;
+        }
     }
 }
