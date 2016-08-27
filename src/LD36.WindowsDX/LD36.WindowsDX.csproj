@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Content\hud.spritefont" />
   </ItemGroup>
   <Import Project="..\LD36\LD36.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

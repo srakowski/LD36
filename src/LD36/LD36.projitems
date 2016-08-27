@@ -9,6 +9,14 @@
     <Import_RootNamespace>LD36</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\BudgetStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\LoseStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\OperateStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\AnalysisStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\ProgressStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\WinStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateMachine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LD36Game.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\GameplayState.cs" />
   </ItemGroup>
 </Project>
