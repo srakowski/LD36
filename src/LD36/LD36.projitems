@@ -25,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\ServerRoom.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\Workstation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GameplayModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ITDepartment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ITEmployee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SkillLevel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Computer.cs" />
@@ -37,8 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Telephone.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Terminal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technology.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\TodoItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\TodoList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Task.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\GameplayState.cs" />
   </ItemGroup>
 </Project>

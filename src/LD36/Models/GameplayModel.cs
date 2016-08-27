@@ -22,6 +22,25 @@ namespace LD36.Models
         /// <summary>
         /// Model of Dolittle Widgets Corporation
         /// </summary>
-        public Company Company { get; set; }
+        public Company Company { get; private set; }
+
+        /// <summary>
+        /// This model represents the thing the player is managing for the simulation.
+        /// </summary>
+        public ITDepartment ITDepartment { get; private set; }
+
+        /// <summary>
+        /// Use Static factory.
+        /// </summary>
+        private GameplayModel() { }
+
+        /// <summary>
+        /// Create a new model of gameplay, called when new game is started.
+        /// </summary>
+        /// <returns></returns>
+        public GameplayModel Create()
+        {
+            return new GameplayModel();
+        }
     }
 }

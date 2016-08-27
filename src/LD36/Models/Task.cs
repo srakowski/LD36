@@ -13,7 +13,7 @@ namespace LD36.Models
     /// a person good with printers is probably going to take less time to perform
     /// a task. these are not fixed values!
     /// </summary>
-    class TodoItem
+    class Task
     {
 
         /// <summary>
