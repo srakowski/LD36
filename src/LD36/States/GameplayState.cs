@@ -13,11 +13,12 @@ namespace LD36.States
     {
         public override void Preload()
         {
+            Load.SpriteFont("terminal");
         }
 
         public override void Create()
         {
-            Stage.BackgroundColor = Color.CornflowerBlue;
+            Stage.BackgroundColor = Color.Black;
 
             var model = GameplayModel.Create("Shawn Rakowski", Gender.Male);
             Data = model;

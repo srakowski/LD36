@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3F621C66-236D-41ED-8DBF-082BD75CC5C1}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LD36.WindowsDX</RootNamespace>
     <AssemblyName>LD36.WindowsDX</AssemblyName>
@@ -38,6 +38,9 @@
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +61,7 @@
     <Content Include="Content\pointer.png" />
     <Content Include="Content\printstation.png" />
     <Content Include="Content\serverroom.png" />
+    <Content Include="Content\terminaloverlay.png" />
     <Content Include="Content\vwall.png" />
     <Content Include="Content\workstation.png" />
     <Content Include="Icon.ico" />
@@ -75,7 +79,7 @@
     <None Include="app.config" />
     <None Include="Content\hud.spritefont" />
     <None Include="Content\title.spritefont" />
-    <None Include="Content\ui.spritefont" />
+    <None Include="Content\terminal.spritefont" />
   </ItemGroup>
   <Import Project="..\LD36\LD36.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

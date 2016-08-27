@@ -10,7 +10,7 @@ namespace LD36
     {
         public override void Initialize()
         {
-            State.Start<MainMenuState>();
+            State.Start<GameplayState>();
         }
     }
 }
