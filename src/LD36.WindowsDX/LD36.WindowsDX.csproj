@@ -55,6 +55,7 @@
     <Content Include="Content\hall.png" />
     <Content Include="Content\hwall.png" />
     <Content Include="Content\office.png" />
+    <Content Include="Content\pointer.png" />
     <Content Include="Content\printstation.png" />
     <Content Include="Content\serverroom.png" />
     <Content Include="Content\vwall.png" />
@@ -73,6 +74,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Content\hud.spritefont" />
+    <None Include="Content\title.spritefont" />
+    <None Include="Content\ui.spritefont" />
   </ItemGroup>
   <Import Project="..\LD36\LD36.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

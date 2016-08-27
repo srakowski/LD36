@@ -10,6 +10,9 @@ namespace LD36.Behaviors
     {
         public override void Initialize()
         {
+            AddState<BudgetStateBehavior>("budget")
+                .Trigger("operate").When(BudgetOkayed);
+
             AddState<OperateStateBehavior>("operate")
                 .Trigger("analysis").When(OperationPeriodEnded);
 
@@ -25,10 +28,12 @@ namespace LD36.Behaviors
 
             AddState<WinStateBehavior>("win");
 
-            AddState<BudgetStateBehavior>("budget")
-                .Trigger("operate").When(BudgetOkayed);
+            Start("budget");
+        }
 
-            Start("operate");
+        private bool BudgetOkayed(Behavior gameplayState)
+        {
+            return true;
         }
 
         private bool OperationPeriodEnded(Behavior gameplayState)
@@ -53,11 +58,6 @@ namespace LD36.Behaviors
         }
 
         private bool ProgressionOkayed(Behavior gameplayState)
-        {
-            return true;
-        }
-
-        private bool BudgetOkayed(Behavior gameplayState)
         {
             return true;
         }
