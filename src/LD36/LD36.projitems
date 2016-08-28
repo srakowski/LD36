@@ -9,51 +9,24 @@
     <Import_RootNamespace>LD36</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\DisplayTerminalBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\BackStoryStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\BudgetStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\GameplayStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\InstructionsStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\LoseStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\OperateStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\AnalysisStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\ProgressStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\StartStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\WinStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateMachine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FlowStateMachine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FollowBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\IdleState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\LoseState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\PlayerBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\PlayerStateMachine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\PlayState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\RestartState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\RunState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\StartupState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TileBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\WinState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameColors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LD36Game.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\CeoEmployee.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Company.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\EmployeeSkillLevels.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Facility.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\Office.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\PrintStation.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\ServerRoom.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\FacilityTopology\Workstation.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\GameplayModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Gender.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\GeneralEmployee.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ITDepartment.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ITEmployee.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\NameGenerator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\PlayerEmployee.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\SkillLevel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Computer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\DesktopComputer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Fax.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\MainFrame.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Printer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Router.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Server.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Telephone.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Terminal.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Technology.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Task.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Terminal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Map.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TileType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\GameplayState.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)States\LoseState.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)States\WinState.cs" />
   </ItemGroup>
 </Project>

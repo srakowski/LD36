@@ -42,6 +42,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\StateMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\cwall.png" />
+    <Content Include="Content\dug.png" />
     <Content Include="Content\hall.png" />
     <Content Include="Content\hwall.png" />
     <Content Include="Content\office.png" />
@@ -62,6 +64,7 @@
     <Content Include="Content\printstation.png" />
     <Content Include="Content\serverroom.png" />
     <Content Include="Content\terminaloverlay.png" />
+    <Content Include="Content\tile.png" />
     <Content Include="Content\vwall.png" />
     <Content Include="Content\workstation.png" />
     <Content Include="Icon.ico" />
