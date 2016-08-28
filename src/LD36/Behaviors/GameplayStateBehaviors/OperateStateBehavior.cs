@@ -10,7 +10,7 @@ namespace LD36.Behaviors.GameplayStateBehaviors
     /// Tactical state. Player has to respond to technical issues, assign
     /// employees to tickets, install hardware, etc. Tasks vs Tickets.
     /// </summary>
-    class OperateStateBehavior : Behavior
+    class OperateStateBehavior : GameplayStateBehavior
     {
         private const int PERIOD_LENGTH_IN_MINUTES = 3;
 

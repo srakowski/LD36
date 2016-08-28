@@ -11,7 +11,7 @@ namespace LD36.Behaviors.GameplayStateBehaviors
     /// if they did poorly, budget cut? Demoted? etc. Will lose if fired. Will
     /// win when promoted to the CIO.
     /// </summary>
-    class ProgressStateBehavior : Behavior
+    class ProgressStateBehavior : GameplayStateBehavior
     {
     }
 }

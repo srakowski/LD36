@@ -9,18 +9,18 @@
     <Import_RootNamespace>LD36</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FacilityViewBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\DisplayTerminalBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\BackStoryStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\BudgetStateBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\GameSetupStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\GameplayStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\InstructionsStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\LoseStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\OperateStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\AnalysisStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\ProgressStateBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\StartStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateBehaviors\WinStateBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\GameplayStateMachine.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\HudViewBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\PointerBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TerminalLineBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameColors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LD36Game.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\CeoEmployee.cs" />
@@ -51,10 +51,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technologies\Terminal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Technology.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Task.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Terminal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\GameplayState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\LoseState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)States\WinState.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FacilityViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HudViewModel.cs" />
   </ItemGroup>
 </Project>

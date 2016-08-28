@@ -1,14 +1,13 @@
 ﻿using Coldsteel;
+using LD36.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LD36.Behaviors.GameplayStateBehaviors
 {
-    /// <summary>
-    /// Yay! Inform the player they won and congrats.
-    /// </summary>
-    class WinStateBehavior : GameplayStateBehavior
+    abstract class GameplayStateBehavior : Behavior
     {
+        protected GameplayModel GameplayModel => Data as GameplayModel;
     }
 }

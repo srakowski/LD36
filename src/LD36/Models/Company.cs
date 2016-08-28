@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LD36.Models
@@ -18,6 +19,11 @@ namespace LD36.Models
 
 
         private List<Employee> _employees = new List<Employee>();
+
+        /// <summary>
+        /// Get the CEO.
+        /// </summary>
+        public CeoEmployee Ceo => _employees.First(e => e is CeoEmployee) as CeoEmployee;
 
         /// <summary>
         /// All company employees, including IT employees.

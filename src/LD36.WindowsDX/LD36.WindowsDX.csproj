@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3F621C66-236D-41ED-8DBF-082BD75CC5C1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LD36.WindowsDX</RootNamespace>
     <AssemblyName>LD36.WindowsDX</AssemblyName>

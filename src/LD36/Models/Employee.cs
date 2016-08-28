@@ -29,6 +29,10 @@ namespace LD36.Models
         /// </summary>
         public Gender Gender { get; private set; }
 
+        public string HeOrShe => Gender == Gender.Female ? "She" : "He";
+        public string HisOrHer => Gender == Gender.Female ? "Her" : "His";
+        public string HimOrHer => Gender == Gender.Female ? "Her" : "Him";
+
         public static Employee GeneratePlayerEmployee(Random rand, string name, Gender gender)
         {
             var employee = new PlayerEmployee();

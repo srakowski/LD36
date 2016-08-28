@@ -10,8 +10,14 @@ namespace LD36.Behaviors
     {
         public override void Initialize()
         {
-            AddState<GameSetupBehavior>("setup")
-                .Trigger("budget").When(SetupComplete);
+            AddState<StartStateBehavior>("start")
+                .Trigger("story").When(Op1Pressed);
+
+            AddState<BackStoryStateBehavior>("story")
+                .Trigger("instructions").When(Op1Pressed);
+
+            AddState<InstructionsStateBehavior>("instructions")
+                .Trigger("budget").When(Op1Pressed);
 
             AddState<BudgetStateBehavior>("budget")
                 .Trigger("operate").When(BudgetOkayed);
@@ -31,14 +37,10 @@ namespace LD36.Behaviors
 
             AddState<WinStateBehavior>("win");
 
-            Start("budget");
+            Start("start");
         }
 
-        private bool SetupComplete(Behavior arg)
-        {
-            var setup = arg as GameSetupBehavior;
-            return setup.SetupComplete;
-        }
+        private bool Op1Pressed(Behavior gameplayState) => Input["op1"].ButtonControl.WasDown();
 
         private bool BudgetOkayed(Behavior gameplayState)
         {

@@ -10,7 +10,7 @@ namespace LD36.Behaviors.GameplayStateBehaviors
     /// with CEO, tasks completed vs initial, did go over budget? etc. Take
     /// The purpose of this is to inform the player of how they did.
     /// </summary>
-    class AnalysisStateBehavior : Behavior
+    class AnalysisStateBehavior : GameplayStateBehavior
     {
     }
 }

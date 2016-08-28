@@ -8,7 +8,7 @@ namespace LD36.Behaviors.GameplayStateBehaviors
     /// <summary>
     /// Darn, they lost, give player information on how to do better.
     /// </summary>
-    class LoseStateBehavior : Behavior
+    class LoseStateBehavior : GameplayStateBehavior
     {
     }
 }
