@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LD36.WindowsDX</RootNamespace>
-    <AssemblyName>LD36.WindowsDX</AssemblyName>
+    <AssemblyName>MineSweepinMinerDeluxe</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -79,7 +79,7 @@
     <None Include="Content\terminal.spritefont" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Coldsteel.WindowsDX\Coldsteel.WindowsDX.csproj">
+    <ProjectReference Include="..\..\..\coldsteel\src\Coldsteel.WindowsDX\Coldsteel.WindowsDX.csproj">
       <Project>{a3224cbb-4cf3-499d-8493-c103653f5bbb}</Project>
       <Name>Coldsteel.WindowsDX</Name>
     </ProjectReference>
