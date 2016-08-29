@@ -38,7 +38,7 @@ namespace LD36.Behaviors
 
         private bool AncientTechnologyMined(Behavior arg)
         {
-            return GameData.Map.AncientTechnology.IsMined;
+            return GameData.Map.AncientTechnology.IsPickedUp;
         }
     }
 }

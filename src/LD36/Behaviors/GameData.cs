@@ -11,5 +11,7 @@ namespace LD36.Behaviors
         public Map Map { get; set; }
         public GameObject Miner { get; set; }
         public TileBehavior[,] Tiles { get; set; }
+        public GameObject AncientTech { get; set; }
+        public FollowBehavior Follow { get; set; }
     }
 }

@@ -41,6 +41,8 @@ namespace LD36.Models
 
         public bool IsMined { get; private set; } = false;
 
+        public bool IsPickedUp { get; set; } = false;
+
         public Action OnMined { get; internal set; }
 
         public Action OnAdjMined { get; set; }

@@ -27,14 +27,19 @@ namespace LD36.Behaviors
 
         public bool IsMined => _tile.IsMined;
 
+        public bool IsAncientTech => _tile.Type == TileType.AncientTechnology;
+
         public Rectangle BoundingBox => new Rectangle((int)this.Transform.Position.X - 48, (int)this.Transform.Position.Y - 48, 96, 96);
 
         internal void Mine()
         {
             _tile.Mine();
             _tile.UpdateAdjTiles();
-            _hit?.Kill();
-            _hit = null;
+            if (_tile.AdjMineCount > 0)
+            {
+                Add.AudioSource("minenum");
+                AudioSource.Play();
+            }
         }
 
         private void UpdateAnimation()

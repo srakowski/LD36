@@ -2,6 +2,7 @@
 using LD36.Behaviors;
 using LD36.Models;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,14 +19,29 @@ namespace LD36.States
             Load.SpriteSheet("miner", 50, 50);
             Load.Image("tile");
             Load.Image("dug");
+            Load.Image("ex");
             Load.SpriteFont("terminal");
+            Load.SpriteFont("hud");
             Load.SpriteSheet("tilesheet", 120, 120);
-            Load.SpriteSheet("numsheet", 24, 24);
+            Load.SpriteSheet("numsheet", 48, 48);
+            Load.Image("mine");
+            Load.Image("atech");
+            Load.Image("blood");
+            Load.SoundEffect("explode");
+            Load.SoundEffect("explode2");
+            Load.SoundEffect("dig");
+            Load.SoundEffect("minenum");
+            Load.SoundEffect("getdisk");
+            Load.LoadAndPlaySong("song");
         }
 
         public override void Create()
         {
             Stage.BackgroundColor = GameColors.Background;
+
+            Layers.Add("hud", 100).StickToCamera = true;
+
+            Layers.Add("blood", 90).BlendState = BlendState.NonPremultiplied;
 
             World.Gravity = new Vector2(0f, 9.86f);
 
@@ -36,7 +52,7 @@ namespace LD36.States
             Layers.Add("dug", -2);
 
             var map = new Map();
-
+            GameObject at = null;
             var tiles = new TileBehavior[map.NumCols + 2, map.NumRows + 3];
             var field = World.AddGameObject();
             for (var x = 0; x < map.NumCols; x++)
@@ -63,7 +79,7 @@ namespace LD36.States
                         .Add.Animation("t", 13)
                         .Add.Animation("b", 14)
                         .Add.Animation("", 15)
-                        .Add.Animation("sltbr", 16)
+                        .Add.Animation("sltbr", 16)                        
                         .Add.Component(tileBehav);
                     tiles[x + 1, y + 2] = tileBehav;
                     tileGO.AddGameObject()
@@ -88,13 +104,13 @@ namespace LD36.States
                     {
                         tileGO.AddGameObject()
                             .Set.Layer("reader")
-                            .Add.TextRenderer("terminal", "M");
+                            .Add.SpriteRenderer("mine");
                     }
                     else if (tileModel.Type == TileType.AncientTechnology)
                     {
-                        tileGO.AddGameObject()
+                        at = tileGO.AddGameObject()
                             .Set.Layer("reader")
-                            .Add.TextRenderer("terminal", "A");
+                            .Add.SpriteRenderer("atech");
                     }
                 }
 
@@ -103,15 +119,19 @@ namespace LD36.States
                 .Add.SpriteSheetRenderer("miner")
                 .Add.Animation("idle", new int[] { 0, 1, 2, 3 }, 300)
                 .Add.Animation("run", new int[] { 4, 5, 6, 7 }, 200)
+                .Add.AudioSource("dig")
                 .Add.Component(new PlayerStateMachine());
 
-            Camera.Add.Component(new FollowBehavior(miner));
+            var follow = new FollowBehavior(miner);
+            Camera.Add.Component(follow);
 
             Data = new GameData()
             {
                 Map = map,
                 Tiles = tiles,
-                Miner = miner
+                Miner = miner, 
+                AncientTech = at,
+                Follow = follow,
             };
         }
     }

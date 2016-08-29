@@ -27,7 +27,7 @@ namespace LD36.Behaviors
         {
             this._posX = (int)((Math.Ceiling(Transform.Position.X) + 48) - (Math.Ceiling(Transform.Position.X + 48) % 96)) / 96;
 
-            if (Input["left"].ButtonControl.IsDown() && _posX > 1)
+            if (Input["left"].ButtonControl.IsDown() && _posX > 0)
             {
                 this.Transform.Position += new Vector2(-0.3f, 0) * GameTime.Delta;
                 this.Animations.Play("run");
@@ -37,11 +37,14 @@ namespace LD36.Behaviors
                 if (!tile?.IsMined ?? false)
                 {
                     if (Vector2.Distance(tile.GameObject.Transform.Position, this.Transform.Position) < 68)
+                    {
+                        AudioSource.Play();
                         tile.Mine();
+                    }
                 }
             }
 
-            if (Input["right"].ButtonControl.IsDown() && _posX < (Data as GameData).Map.NumCols)
+            if (Input["right"].ButtonControl.IsDown() && _posX < (Data as GameData).Map.NumCols + 1)
             {
                 this.Transform.Position += new Vector2(0.3f, 0) * GameTime.Delta;
                 this.Animations.Play("run");
@@ -51,7 +54,10 @@ namespace LD36.Behaviors
                 if (!tile?.IsMined ?? false)
                 {
                     if (Vector2.Distance(tile.GameObject.Transform.Position, this.Transform.Position) < 68)
+                    {
+                        AudioSource.Play();
                         tile.Mine();
+                    }
                 }
                 //else
                 //{
@@ -65,6 +71,7 @@ namespace LD36.Behaviors
                 var tile = this._tiles[_posX, _posY - 1];
                 if (!tile?.IsMined ?? false)
                 {
+                    AudioSource.Play();
                     tile.Mine();
                 }
                 else
@@ -74,13 +81,14 @@ namespace LD36.Behaviors
                 }
             }
 
-            if (Input["down"].ButtonControl.WasUp() && _posY < (Data as GameData).Map.NumRows)
+            if (Input["down"].ButtonControl.WasUp() && _posY < (Data as GameData).Map.NumRows + 1)
             {
                 var tile = this._tiles[_posX, _posY + 1];
                 if (tile != null)
                 {
                     if (!tile?.IsMined ?? false)
                     {
+                        AudioSource.Play();
                         tile.Mine();
                     }
                     else
@@ -89,6 +97,15 @@ namespace LD36.Behaviors
                         this._posY += 1;
                     }
                 }
+            }
+
+            var map = (Data as GameData).Map;
+            var terl = this._tiles[_posX, _posY];
+            if (terl?.IsAncientTech ?? false)
+            {
+                Add.AudioSource("getdisk");
+                AudioSource.Play();
+                map.AncientTechnology.IsPickedUp = true;
             }
         }
     }

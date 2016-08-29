@@ -7,16 +7,16 @@ namespace LD36.Behaviors
 {
     class FollowBehavior : Behavior
     {
-        private GameObject _subject;
+        public GameObject Subject { get; set; }
 
         public FollowBehavior(GameObject subject)
         {
-            _subject = subject;
+            Subject = subject;
         }
 
         public override void Update()
         {
-            Transform.LocalPosition = _subject.Transform.Position;
+            Transform.LocalPosition = Subject.Transform.Position;
         }
     }
 }

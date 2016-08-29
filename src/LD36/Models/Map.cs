@@ -14,10 +14,10 @@ namespace LD36.Models
 
         private List<Tile> _mines = new List<Tile>();
 
-        private const int MAP_COLS = 12;
+        private const int MAP_COLS = 24;
         public int NumCols => MAP_COLS;
 
-        private const int MAP_ROWS = 12;
+        private const int MAP_ROWS = 24;
         public int NumRows => MAP_ROWS;
 
         public bool AnyMinesTripped => _mines.Any(m => m.IsMined);
