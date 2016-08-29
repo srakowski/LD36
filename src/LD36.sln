@@ -7,16 +7,16 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LD36", "LD36\LD36.shproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LD36.WindowsDX", "LD36.WindowsDX\LD36.WindowsDX.csproj", "{3F621C66-236D-41ED-8DBF-082BD75CC5C1}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Coldsteel", "..\..\coldsteel\src\Coldsteel\Coldsteel.shproj", "{EA8CA643-FB39-4B22-94C2-A5D120A87A25}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Coldsteel", "Coldsteel\Coldsteel.shproj", "{EA8CA643-FB39-4B22-94C2-A5D120A87A25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coldsteel.WindowsDX", "..\..\coldsteel\src\Coldsteel.WindowsDX\Coldsteel.WindowsDX.csproj", "{A3224CBB-4CF3-499D-8493-C103653F5BBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coldsteel.WindowsDX", "Coldsteel.WindowsDX\Coldsteel.WindowsDX.csproj", "{A3224CBB-4CF3-499D-8493-C103653F5BBB}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		LD36\LD36.projitems*{3f621c66-236d-41ed-8dbf-082bd75cc5c1}*SharedItemsImports = 4
 		LD36\LD36.projitems*{4ab1b5f4-5ad4-49f6-94fb-afa021d46a5f}*SharedItemsImports = 13
-		..\..\coldsteel\src\Coldsteel\Coldsteel.projitems*{a3224cbb-4cf3-499d-8493-c103653f5bbb}*SharedItemsImports = 4
-		..\..\coldsteel\src\Coldsteel\Coldsteel.projitems*{ea8ca643-fb39-4b22-94c2-a5d120a87a25}*SharedItemsImports = 13
+		Coldsteel\Coldsteel.projitems*{a3224cbb-4cf3-499d-8493-c103653f5bbb}*SharedItemsImports = 4
+		Coldsteel\Coldsteel.projitems*{ea8ca643-fb39-4b22-94c2-a5d120a87a25}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -11,8 +11,20 @@ namespace LD36
     {
         public override void Initialize()
         {
-            Input.AddButtonControl("op1")
-                .Keyboard(Keys.D1);
+            Input.AddButtonControl("left")
+                .Keyboard(Keys.A, Keys.Left);
+
+            Input.AddButtonControl("right")
+                .Keyboard(Keys.D, Keys.Right);
+
+            Input.AddButtonControl("up")
+                .Keyboard(Keys.W, Keys.Up);
+
+            Input.AddButtonControl("down")
+                .Keyboard(Keys.S, Keys.Down);
+
+            Input.AddButtonControl("continue")
+                .Keyboard(Keys.Space, Keys.Enter);
 
             State.Start<GameplayState>();
         }

@@ -7,6 +7,6 @@ namespace LD36
 {
     static class GameColors
     {
-        public static Color Terminal => new Color(255, 191, 0);
+        public static Color Background => new Color(17, 46, 64);
     }
 }
