@@ -13,7 +13,7 @@
     <AssemblyName>LD36.WindowsDX</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -73,16 +73,16 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\coldsteel\src\Coldsteel.WindowsDX\Coldsteel.WindowsDX.csproj">
-      <Project>{a3224cbb-4cf3-499d-8493-c103653f5bbb}</Project>
-      <Name>Coldsteel.WindowsDX</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Content\hud.spritefont" />
     <None Include="Content\title.spritefont" />
     <None Include="Content\terminal.spritefont" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coldsteel.WindowsDX\Coldsteel.WindowsDX.csproj">
+      <Project>{a3224cbb-4cf3-499d-8493-c103653f5bbb}</Project>
+      <Name>Coldsteel.WindowsDX</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\LD36\LD36.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
